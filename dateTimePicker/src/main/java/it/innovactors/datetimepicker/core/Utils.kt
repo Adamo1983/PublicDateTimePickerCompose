@@ -2,6 +2,7 @@ package it.innovactors.datetimepicker.core
 
 import androidx.compose.animation.core.*
 import java.time.LocalDate
+import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 
@@ -61,4 +62,12 @@ fun LocalDate.formatWithSpecialLabels(
         this.isEqual(yesterday) -> yesterdayLabel
         else -> this.format(formatter)
     }
+}
+
+fun LocalTime.toFullHours(): FullHours{
+    return FullHours(this.hour, this.minute)
+}
+
+fun FullHours.toLocalTime(): LocalTime{
+    return LocalTime.of(this.hours, this.minutes)
 }

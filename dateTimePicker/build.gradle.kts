@@ -68,7 +68,7 @@ afterEvaluate {
 
                 groupId = "com.github.Adamo1983"
                 artifactId = "DataTimePickerComposeMinSdk21"
-                version = "1.0.2"
+                version = "1.0.3"
             }
         }
     }
